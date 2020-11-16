@@ -32,6 +32,11 @@ variable "machine_type" {
   default     = "n1-standard-4"
 }
 
+variable "image_type" {
+  description = "Image to run on each node. Must be 'COS', 'COS_CONTAINERD', 'UBUNTU', 'UBUNTU_CONTAINERD', 'WINDOWS_LTSC', or 'WINDOWS_SAC'"
+  default     = "COS"
+}
+
 variable "disk_size_in_gb" {
   description = "Disk size, in GB, for the nodes in the pool."
   default     = "100"
